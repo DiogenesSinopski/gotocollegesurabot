@@ -1,6 +1,6 @@
 from aiogram import types
 from aiogram.types import CallbackQuery, Message, InputFile
-from keyboards.inline import ikb_menu, ikb_menu4, ikb_menu3, ikb_menu2
+from keyboards.inline import ikb_menu_main, ikb_menu_osvitni, ikb_menu_zvyazatysya
 from loader import dp
 
 @dp.message_handler(text='Головне меню')
@@ -13,7 +13,7 @@ async def show_inline_menu(message: types.Message):
 - Запросити про допомогу зі вступу, реєстрації on-line кабінету вступника;
 - Дізнатися розпорядок роботи приймальної комісії.
 
-Оберіть що вас цікавить''', reply_markup=ikb_menu)
+Оберіть що вас цікавить''', reply_markup=ikb_menu_main)
 
 @dp.message_handler(text='Як до нас дібратися')
 async def menu_index(message: types.Message):
@@ -36,17 +36,17 @@ async def send_message(call: CallbackQuery):
 Університет: rauniver@suem.edu.ua
 Коледж: college@suem.edu.ua''')
 
-@dp.callback_query_handler(text='Діджитал')
-async def send_message(call: CallbackQuery):
-    await call.message.edit_reply_markup(ikb_menu2)
+@dp.callback_query_handler(text='Подзвонити')
+async def menu_index(call: types.CallbackQuery):
+    await call.message.answer_contact(phone_number='+380991052771', first_name='СУЕМ')
 
-@dp.callback_query_handler(text='Кнопки4')
+@dp.callback_query_handler(text='Освітні програми')
 async def send_message(call: CallbackQuery):
-    await call.message.edit_reply_markup(ikb_menu4)
+    await call.message.edit_reply_markup(ikb_menu_osvitni)
 
-@dp.callback_query_handler(text='Кнопки3')
+@dp.callback_query_handler(text='Зв’язатися')
 async def send_message(call: CallbackQuery):
-    await call.message.edit_reply_markup(ikb_menu3)
+    await call.message.edit_reply_markup(ikb_menu_zvyazatysya)
 
 @dp.callback_query_handler(text='Економіка')
 async def menu_index(call: types.CallbackQuery):
@@ -80,7 +80,5 @@ async def menu_index(call: types.CallbackQuery):
     await call.message.answer_photo(photo=InputFile(path_or_bytesio='media/Turyzm.jpg'))
 
 
-@dp.callback_query_handler(text='dcnfg')
-async def menu_index(call: types.CallbackQuery):
-    await call.message.answer_contact(phone_number='+380991052771', first_name='СУЕМ')
+
 

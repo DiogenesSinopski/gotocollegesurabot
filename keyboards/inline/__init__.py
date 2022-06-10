@@ -1,5 +1,4 @@
-from .inline_kb_menu import ikb_menu
-from .inline_kb_menu2 import ikb_menu2
-from .inline_kb_menu3 import ikb_menu3
-from .inline_kb_menu4 import ikb_menu4
+from .inline_kb_menu_main import ikb_menu_main
+from .inline_kb_menu_zvyazatysya import ikb_menu_zvyazatysya
+from .inline_kb_menu_osvitni import ikb_menu_osvitni
 

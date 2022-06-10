@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ikb_menu4 = InlineKeyboardMarkup(row_width=2,
+ikb_menu_osvitni = InlineKeyboardMarkup(row_width=2,
     inline_keyboard=[
         [
             InlineKeyboardButton(text='Digital_маркетинг', callback_data='Маркетинг'),
