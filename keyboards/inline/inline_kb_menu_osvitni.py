@@ -4,7 +4,7 @@ ikb_menu_osvitni = InlineKeyboardMarkup(row_width=2,
     inline_keyboard=[
         [
             InlineKeyboardButton(text='Digital_маркетинг', callback_data='Маркетинг'),
-            InlineKeyboardButton(text='Digital_облік', callback_data='Облік'),
+            InlineKeyboardButton(text='Облік і оподаткування', callback_data='Облік'),
         ],
         [
             InlineKeyboardButton(text='Digital_економіка', callback_data='Економіка'),
