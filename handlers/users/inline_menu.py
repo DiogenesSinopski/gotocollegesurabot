@@ -58,7 +58,7 @@ async def menu_index(call: types.CallbackQuery):
 
 @dp.callback_query_handler(text='Облік')
 async def menu_index(call: types.CallbackQuery):
-    await call.message.answer_photo(photo=InputFile(path_or_bytesio='media/Digital_econom.jpg'))
+    await call.message.answer_photo(photo=InputFile(path_or_bytesio='media/Digital_oblik.jpg'))
 
 
 @dp.callback_query_handler(text='авто')
